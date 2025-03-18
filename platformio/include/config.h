@@ -30,6 +30,8 @@
 // Uncomment the macro that identifies your physical panel.
 // #define DISP_BW_V2
 #define DISP_3C_B
+// #define DISP_BW_V2
+#define DISP_3C_B
 // #define DISP_7C_F
 // #define DISP_BW_V1
 
@@ -45,7 +47,7 @@
 // 3 COLOR E-INK ACCENT COLOR
 // Defines the 3rd color to be used when a 3+ color display is selected.
 #if defined(DISP_3C_B) || defined(DISP_7C_F)
-  // #define ACCENT_COLOR GxEPD_BLACK
+  #define ACCENT_COLOR GxEPD_BLACK
   #define ACCENT_COLOR GxEPD_RED
   // #define ACCENT_COLOR GxEPD_GREEN
   // #define ACCENT_COLOR GxEPD_BLUE
@@ -122,8 +124,8 @@
 // This can either be Probability of Precipitation (PoP) or daily volume.
 //   Metric   : Millimeters
 //   Imperial : Inches
-#define UNITS_DAILY_PRECIP_POP
-// #define UNITS_DAILY_PRECIP_MILLIMETERS
+// #define UNITS_DAILY_PRECIP_POP
+#define UNITS_DAILY_PRECIP_MILLIMETERS
 // #define UNITS_DAILY_PRECIP_CENTIMETERS
 // #define UNITS_DAILY_PRECIP_INCHES
 

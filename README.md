@@ -27,10 +27,10 @@
   2-4    1a86:7522  USB-SERIAL CH340K (COM5)  Not shared
   ...
   ```
-- Bind your Controller and attach to running WSL
+- Bind your Controller and attach to running WSL (here ID: 2-4)
   ```
   usbipd bind --busid=2-4
-  usbipd attach --wsl --busid=2-4
+  usbipd attach --auto-attach --wsl --busid=2-4
   ```
 
 ### WSL2
@@ -42,6 +42,16 @@
   ```
   sudo chmod a+rw /dev/ttyUSB0   
   ```
+
+- Add permanent usb access rights
+  ```
+  sudo nano /etc/udev/rules.d/platformio.rules 
+  ```
+  add
+  ```
+  SUBSYSTEMS=="usb", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7522", GROUP="dialout", MODE="0666"
+  ```
+
 
 ### Open the Project with vscode
 - ```

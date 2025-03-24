@@ -16,7 +16,8 @@
  */
 
 #include <Arduino.h>
-#include <Adafruit_BME280.h>
+// #include <Adafruit_BME280.h>
+#include <Adafruit_BME680.h>
 #include <Adafruit_Sensor.h>
 #include <Preferences.h>
 #include <time.h>
@@ -287,16 +288,16 @@ void setup()
   digitalWrite(PIN_BME_PWR, HIGH);
   float inTemp     = NAN;
   float inHumidity = NAN;
-  Serial.print(String(TXT_READING_FROM) + " BME280... ");
+  Serial.print(String(TXT_READING_FROM) + " BME680... ");
   TwoWire I2C_bme = TwoWire(0);
-  Adafruit_BME280 bme;
+  Adafruit_BME680 bme(&I2C_bme);
 
-  I2C_bme.begin(PIN_BME_SDA, PIN_BME_SCL, 100000); // 100kHz
-  if(bme.begin(BME_ADDRESS, &I2C_bme))
+  I2C_bme.begin(PIN_BME_SDA, PIN_BME_SCL, 100000); // 100kHz  
+  if(bme.begin(BME_ADDRESS))
   {
     inTemp     = bme.readTemperature(); // Celsius
     inHumidity = bme.readHumidity();    // %
-
+    
     // check if BME readings are valid
     // note: readings are checked again before drawing to screen. If a reading
     //       is not a number (NAN) then an error occurred, a dash '-' will be

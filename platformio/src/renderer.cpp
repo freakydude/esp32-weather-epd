@@ -275,17 +275,15 @@ void drawCurrentConditions(const owm_current_t &current,
 
   // current temp
 #ifdef UNITS_TEMP_KELVIN
-  dataStr = String(static_cast<int>(std::round(current.temp)));
+  dataStr = String(current.temp,0);
   unitStr = TXT_UNITS_TEMP_KELVIN;
 #endif
 #ifdef UNITS_TEMP_CELSIUS
-  dataStr = String(static_cast<int>(
-            std::round(kelvin_to_celsius(current.temp))));
+  dataStr = String(kelvin_to_celsius(current.temp),0);
   unitStr = TXT_UNITS_TEMP_CELSIUS;
 #endif
 #ifdef UNITS_TEMP_FAHRENHEIT
-  dataStr = String(static_cast<int>(
-            std::round(kelvin_to_fahrenheit(current.temp))));
+  dataStr = String(kelvin_to_fahrenheit(current.temp),0);
   unitStr = TXT_UNITS_TEMP_FAHRENHEIT;
 #endif
   // FONT_**_temperature fonts only have the character set used for displaying
@@ -527,14 +525,13 @@ void drawCurrentConditions(const owm_current_t &current,
   if (!std::isnan(inTemp))
   {
 #ifdef UNITS_TEMP_KELVIN
-    dataStr = String(static_cast<int>(std::round(celsius_to_kelvin(inTemp))));
+    dataStr = String(celsius_to_kelvin(inTemp),1);
 #endif
 #ifdef UNITS_TEMP_CELSIUS
-    dataStr = String(static_cast<int>(std::round(inTemp)));
+    dataStr = String(inTemp,1);
 #endif
 #ifdef UNITS_TEMP_FAHRENHEIT
-    dataStr = String(static_cast<int>(
-              std::round(celsius_to_fahrenheit(inTemp))));
+    dataStr = String(inTemp,1);
 #endif
   }
   else

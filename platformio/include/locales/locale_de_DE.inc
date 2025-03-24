@@ -135,21 +135,21 @@ const char *TXT_UNITS_PRECIP_INCHES      = "in";
 
 // MISCELLANEOUS MESSAGES
 // Title Case
-const char *TXT_LOW_BATTERY = "Low Battery";
-const char *TXT_NETWORK_NOT_AVAILABLE = "Network Not Available";
-const char *TXT_TIME_SYNCHRONIZATION_FAILED = "Time Synchronization Failed";
-const char *TXT_WIFI_CONNECTION_FAILED = "WiFi Connection Failed";
+const char *TXT_LOW_BATTERY = "Batterie schwach";
+const char *TXT_NETWORK_NOT_AVAILABLE = "Netzwerk nicht verf\374gbar";
+const char *TXT_TIME_SYNCHRONIZATION_FAILED = "Zeit Synchonisierung fehlgeschlagen";
+const char *TXT_WIFI_CONNECTION_FAILED = "WiFi Verbindung fehlgeschlagen";
 // First Word Capitalized
 const char *TXT_ATTEMPTING_HTTP_REQ = "Attempting HTTP request";
-const char *TXT_AWAKE_FOR = "Awake for";
-const char *TXT_BATTERY_VOLTAGE = "Battery voltage";
-const char *TXT_CONNECTING_TO = "Connecting to";
+const char *TXT_AWAKE_FOR = "Aktiv für";
+const char *TXT_BATTERY_VOLTAGE = "Batteriespannung";
+const char *TXT_CONNECTING_TO = "Verbindung mit";
 const char *TXT_COULD_NOT_CONNECT_TO = "Could not connect to";
 const char *TXT_ENTERING_DEEP_SLEEP_FOR = "Entering deep sleep for";
-const char *TXT_READING_FROM = "Reading from";
-const char *TXT_FAILED  = "Failed";
-const char *TXT_SUCCESS = "Success";
-const char *TXT_UNKNOWN = "Unknown";
+const char *TXT_READING_FROM = "Lese von";
+const char *TXT_FAILED  = "Fehlgeschlagen";
+const char *TXT_SUCCESS = "Erfolgreich";
+const char *TXT_UNKNOWN = "Unbekannt";
 // All Lowercase
 const char *TXT_NOT_FOUND = "not found";
 const char *TXT_READ_FAILED = "read failed";
@@ -158,9 +158,9 @@ const char *TXT_FAILED_TO_GET_TIME = "Failed to get the time!";
 const char *TXT_HIBERNATING_INDEFINITELY_NOTICE = "Hibernating without wake time!";
 const char *TXT_REFERENCING_OLDER_TIME_NOTICE = "Failed to synchronize time before deep-sleep, referencing older time.";
 const char *TXT_WAITING_FOR_SNTP = "Waiting for SNTP synchronization.";
-const char *TXT_LOW_BATTERY_VOLTAGE = "Low battery voltage!";
-const char *TXT_VERY_LOW_BATTERY_VOLTAGE = "Very low battery voltage!";
-const char *TXT_CRIT_LOW_BATTERY_VOLTAGE = "Critically low battery voltage!";
+const char *TXT_LOW_BATTERY_VOLTAGE = "Niedrige Batteriespannung!";
+const char *TXT_VERY_LOW_BATTERY_VOLTAGE = "Sehr niedrige Batteriespannung!";
+const char *TXT_CRIT_LOW_BATTERY_VOLTAGE = "Kritisch niedrige Batteriespannung!";
 
 // ALERTS
 // The display can show up to 2 alerts, but alerts can be unpredictable in
